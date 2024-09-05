@@ -1,0 +1,10 @@
+services:
+  microservice:
+    build: .
+    container_name: microservice-example
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dist:/app/dist
